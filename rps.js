@@ -24,26 +24,27 @@ function getHumanChoice(){
 }
 
 
-let humanScore = 0
-let computerScore = 0
+
 
 function playRound(humanChoice, computerChoice ){
+    let hScore = 0
+    let cScore = 0
     if (humanChoice.toLowerCase() == computerChoice.toLowerCase()){
-        alert("its a tie")
+        return hScore == 0 && cScore == 0
     }else if (humanChoice.toLowerCase() == "rock" && computerChoice.toLowerCase() == "paper" ){
-        alert("u won")
+        return hScore + 1
 
     }else if (humanChoice.toLowerCase() == "rock" && computerChoice.toLowerCase() == "scissors" ){
-        alert("u won")
+        return hScore + 1
 
     }else if (humanChoice.toLowerCase() == "paper" && computerChoice.toLowerCase() == "scissors" ){
-        alert("u lose")
+        return cScore + 1
     }else if (humanChoice.toLowerCase() == "scissors" && computerChoice.toLowerCase() == "paper" ){
-        alert("u won")
+        return cScore + 1
     }else if (humanChoice.toLowerCase() == "paper" && computerChoice.toLowerCase() == "rock" ){
-        alert("u lose")
+        return cScore +1 
     }else if (humanChoice.toLowerCase() == "scissors" && computerChoice.toLowerCase() == "rock" ){
-        alert("u lose")
+        return cScore +1
     }
 
 
@@ -52,5 +53,13 @@ function playRound(humanChoice, computerChoice ){
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+
+
+function playGame(){
+    let humanScore = 0
+    let computerScore = 0
+    
+    
+
+}
 
